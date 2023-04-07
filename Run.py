@@ -3,6 +3,13 @@ from subprocess import *
 from threading import *
 import socket
 import sys
+import os
+
+dir = os.path.dirname(os.path.abspath(__file__))
+with open(dir+"/files/b.txt","r") as line:
+    for i in line:
+        print(i,end="")
+        slp(0.5)
 
 if len(sys.argv) < 2:
     print("\033[1;34m[*]\033[0m\tUse: python3 %s [IP:PORTA]"%(sys.argv[0]))
